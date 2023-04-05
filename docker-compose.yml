@@ -9,6 +9,10 @@ services:
       timeout: 5s
       retries: 3
     deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 4M
       replicas: 3
       update_config:
         parallelism: 1
